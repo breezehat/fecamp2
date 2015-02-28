@@ -1,8 +1,236 @@
 @charset "utf-8";
-
-.container{
-	max-width: 960px;
-	background: silver;
-	margin: 0 auto;
+/* html reset-html5를 지원하지 않는 ie8을 지원하게 하는 css */
+header,
+footer,
+section,
+article,
+nav,
+aside,
+main,
+figure,
+figcaption{
+	display: block;
 }
-.header>h1
+html,
+body{
+	min-height: 100%;
+}
+body{
+	margin: 0;
+	min-width: 320px;
+}
+body,
+table,
+button,
+input,
+textarea,
+select{
+	font-size: 14px;
+}
+/* All */
+body{
+	background: -webkit-linear-gradient(#aaa,#fff);
+	background: -moz-linear-gradient(#aaa,#fff);
+	background: -mslinear-gradient(#aaa,#fff);
+	background: -o-linear-gradient(#aaa,#fff);
+	background: linear-gradient(#aaa,#fff);
+}
+
+.search>input{
+	vertical-align: top;
+	border-radius: 3px;
+}
+.header>h1{
+	font-size:28px;
+	text-shadow:1px 1px 2px #fff
+}
+.search>[type="search"]{
+	border: 1px solid #ccc;
+	height: 32px;
+	width: 160px;
+	box-shadow: 0 0 4px #ccc inset;
+}
+.search>[type="submit"]{
+	width: 50px;
+	height: 32px;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 4px #aaa;
+}
+main,
+.lnb,
+.aside{
+	margin-bottom: 15px;
+}
+main{
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 4px rgba(0,0,0,.3);
+	min-height: 300px
+}
+.lnb ul,
+.aside ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.lnb{
+	text-shadow: 1px 1px 0 #333;
+}
+.lnb h2{
+	background: #666;
+	border-radius: 4px 4px 0 0;
+	font-size: 14px;
+	color: #fff;
+	padding: 0 10px;
+	line-height: 32px;
+	margin: 0;
+}
+
+.lnb li{
+	margin: 1px 0;
+}
+.lnb a{
+	display: block;
+	background: #777;
+	padding: 0 10px;
+	height: 32px;
+	line-height: 32px;
+	text-decoration: none;
+	color: #fff;
+	transition:.2s;
+}
+.lnb li:last-child>a{
+	border-radius: 0 0 4px 4px;
+}
+.lnb a:hover,
+.lnb a:focus{
+	background: #444;
+}
+.aside{
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 0 10px;
+}
+.aside h2{
+	font-size: 13px;
+	margin: 0;
+	border-bottom: 1px dashed #ddd;
+	line-height: 32px;
+}
+.aside ul{
+	padding: 10px 0;
+}
+.aside a{
+	display: block;
+	line-height: 32px;
+}
+.footer{
+	border-top: 1px dotted #ccc;
+}
+.footer p{
+	text-align: center;
+	color: #777;
+}
+
+
+/* mobile */
+ .container{
+ 	margin: 0 10px;
+ }
+.skip{
+	display: none;
+}
+.gnb>h2{
+	height: 1px;
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+}
+.gnb>button{
+	border: 0;
+	background: #666 url(xxx.png) no-repeat;
+	top:4px;
+	right: 4px;
+	width: 40px;
+	height: 36px;
+	padding: 36px 0 0 0;
+	position: absolute;
+	overflow: hidden;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.gnb>button:before{
+	content:"";
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 32px;
+	height: 4px;
+	border-top: 12px double #fff;
+	border-bottom: 12px double #fff;
+
+}
+.gnb ul{
+	background: #444;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.gnb ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: none;
+}
+.gnb a{
+	display: block;
+	background: #666;
+	color: #fff;
+	line-height: 32px;
+	text-decoration: none;
+	padding: 0 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.gnb>ul>li>a{
+	background: #444;
+}
+.gnb>li li{
+	border-top: 1px dotted #444;
+}
+.gnb>li li:first-child{
+	borer: 0;
+}
+.search{
+	margin: 15px 0;
+	padding: 0 60px 0 0;
+	position: relative;
+}
+.search>[type="search"]{
+	display: block;
+	width: 100%;
+}
+.search>[type="submit"]{
+	width: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/* tablet & desctop */
+@media (min-width: 768px){
+
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
+/* desdtop */
+@media (min-width: 1025px){
+
+}
+
+
+
+
